@@ -18,6 +18,17 @@ A production-style Python Flask REST API containerized with Docker (multi-stage 
                         └─────────────────────────────────────┘
 ```
 
+## Live Demo Screenshots
+
+### Grafana Monitoring Dashboard
+![Grafana Dashboard](screenshots/Screenshot%202026-06-08%20005748.png)
+
+### Prometheus Targets
+![Prometheus Targets](screenshots/Screenshot%202026-06-08%20005622.png)
+
+### Flask REST API
+![Flask API](screenshots/Screenshot%202026-06-08%20005422.png)
+
 ## What's New in v2.0 (Prometheus + Grafana)
 
 | Addition | Details |
