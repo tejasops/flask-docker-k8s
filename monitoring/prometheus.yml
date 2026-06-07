@@ -1,0 +1,17 @@
+global:
+  scrape_interval:     15s   # Scrape every 15 seconds
+  evaluation_interval: 15s   # Evaluate rules every 15 seconds
+
+scrape_configs:
+
+  # ─── Prometheus self-monitoring ─────────────────────────────────────────────
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # ─── Flask API ──────────────────────────────────────────────────────────────
+  - job_name: "flask-api"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["flask-api:5000"]    # Docker Compose service name
+    # For Kubernetes, use kubernetes_sd_configs instead (see k8s/monitoring/)
