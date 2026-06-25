@@ -6,15 +6,15 @@ A production-style Python Flask REST API containerized with Docker (multi-stage 
 
 ```
                         ┌─────────────────────────────────────┐
-                        │         Docker Compose Stack         │
-                        │                                      │
-  HTTP Request ──────▶  │  flask-api :5000                     │
-                        │       │  /metrics endpoint           │
-                        │       ▼                              │
-                        │  prometheus :9090  ◀─── scrapes      │
-                        │       │                              │
-                        │       ▼                              │
-                        │  grafana :3000  ◀─── queries PromQL  │
+                        │         Docker Compose Stack        │
+                        │                                     │
+  HTTP Request ──────▶ |  flask-api :5000                     |
+                        │       │  /metrics endpoint          |
+                        │       ▼                             │
+                        │  prometheus :9090  ◀─── scrapes    |
+                        │       │                             │
+                        │       ▼                             │
+                        │  grafana :3000  ◀─── queries PromQL │
                         └─────────────────────────────────────┘
 ```
 
